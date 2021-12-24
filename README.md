@@ -1,6 +1,6 @@
 This is my personal project for Todo list app.<br/>
 building a Todo list app based on functionality I think it can be useful for myself and other people.<br/>
-At the moment I am focusing on functionality not the design.<br/>
+
 
 can add delete todos individually<br/>
 filter todo based on completion<br/>
