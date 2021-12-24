@@ -7,7 +7,7 @@ function TodoList (props) {
     return(
         <div>
             {filter==="all"?
-                <ol>{todos.map(todo=>{return <li key={todo.id}><Todo todo={todo} todos={todos} setTodos={setTodos} key={todo.id}/></li>})}</ol>
+                <ol>{todos.length===0?'add something to do':''}{todos.map(todo=>{return <li key={todo.id}><Todo todo={todo} todos={todos} setTodos={setTodos} key={todo.id}/></li>})}</ol>
                 :
                 <ol>{fil.map(todo=>{return <li key={todo.id}><Todo todo={todo} todos={todos} setTodos={setTodos} key={todo.id}/></li>})}{fil.length===0?"nothing yet":""}</ol>
                 
