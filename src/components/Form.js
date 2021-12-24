@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Form(props){
-    const {setInputText, todos, setTodos,inputText}=props
+    const {setInputText, todos, setTodos,inputText, setFilter, filter}=props
     const inputTextHandler=(e)=>{
         setInputText(e.target.value)
     };
@@ -15,21 +15,17 @@ function Form(props){
     }
     const removeAllCompleteHandler=(e)=>{
         e.preventDefault()
-        console.log(todos)
         setTodos(todos.filter(todo=>(todo.completed===false)))
     }
     const dropdownonchangeHandler=(e)=>{
         
-        let arr
-        arr=todos.filter(todo=>(todo.completed.toString()===e.target.value))
-        setTodos(arr)
-        
+       setFilter(e.target.value)
     }
     return(
         <div>
             <form>
                 <input onChange={inputTextHandler} value={inputText} type='text'></input>
-                <select onChange={dropdownonchangeHandler} defaultValue={"all"}>
+                <select onChange={dropdownonchangeHandler} value={filter} >
                     <option value="true">complete</option>
                     <option value='false'>incomplete</option>
                     <option value='all'>all</option>
