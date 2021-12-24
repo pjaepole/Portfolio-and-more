@@ -18,13 +18,20 @@ function Form(props){
         console.log(todos)
         setTodos(todos.filter(todo=>(todo.completed===false)))
     }
+    const dropdownonchangeHandler=(e)=>{
+        
+        let arr
+        arr=todos.filter(todo=>(todo.completed.toString()===e.target.value))
+        setTodos(arr)
+        
+    }
     return(
         <div>
             <form>
                 <input onChange={inputTextHandler} value={inputText} type='text'></input>
-                <select>
-                    <option value='complete'>complete</option>
-                    <option value='incomplete'>incomplete</option>
+                <select onChange={dropdownonchangeHandler} defaultValue={"all"}>
+                    <option value="true">complete</option>
+                    <option value='false'>incomplete</option>
                     <option value='all'>all</option>
                 </select>
                 <button onClick={submitTodoHandler}type='submit'>add</button>

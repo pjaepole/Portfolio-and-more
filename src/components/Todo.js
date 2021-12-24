@@ -18,7 +18,7 @@ function Todo(props){
     }
     return(
         <div>
-            {todo.completed?<li className='todoC'>{todo.text}</li> :<li>{todo.text}</li>}
+            {todo.completed?<div className='todoC'>{todo.text}</div> :<div>{todo.text}</div>}
             <button onClick={toggleDone}>done</button>
             <button onClick={deleteHandler}>remove from list</button>
         </div>
