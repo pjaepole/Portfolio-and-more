@@ -1,3 +1,12 @@
+This is my personal project for Todo list app.<br/>
+building a Todo list app based on functionality I think it can be useful for myself and other people.<br/>
+
+
+can add delete todos individually<br/>
+filter todo based on completion<br/>
+delete all completed todo<br/>
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
