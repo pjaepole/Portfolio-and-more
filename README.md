@@ -5,7 +5,7 @@ building a Todo list app based on functionality I think it can be useful for mys
 can add delete todos individually<br/>
 filter todo based on completion<br/>
 delete all completed todo<br/>
-
+can filter todos based on completion status<br/>
 
 # Getting Started with Create React App
 
