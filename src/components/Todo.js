@@ -1,4 +1,4 @@
-
+import './Todo.css'
 
 function Todo(props){
     const {todo, todos, setTodos}=props
@@ -18,7 +18,7 @@ function Todo(props){
     }
     return(
         <div>
-            <li>{todo.text}{todo.id}{todo.completed? "complete":"  need to work on it"}</li>
+            {todo.completed?<li className='todoC'>{todo.text}</li> :<li>{todo.text}</li>}
             <button onClick={toggleDone}>done</button>
             <button onClick={deleteHandler}>remove from list</button>
         </div>

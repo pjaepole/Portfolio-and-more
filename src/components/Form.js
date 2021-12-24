@@ -13,6 +13,11 @@ function Form(props){
         ])
         setInputText('')
     }
+    const removeAllCompleteHandler=(e)=>{
+        e.preventDefault()
+        console.log(todos)
+        setTodos(todos.filter(todo=>(todo.completed===false)))
+    }
     return(
         <div>
             <form>
@@ -23,6 +28,7 @@ function Form(props){
                     <option value='all'>all</option>
                 </select>
                 <button onClick={submitTodoHandler}type='submit'>add</button>
+                <button onClick={removeAllCompleteHandler}>remove all completed task</button>
             </form>
         </div>
     )
