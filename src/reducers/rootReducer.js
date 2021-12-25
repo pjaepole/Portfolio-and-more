@@ -1,13 +1,25 @@
-const initialState ={
+import {
+    ADD_TODO
+} from '../actions'
+export const initialState ={
     todos:[
-        {text: 'todos will be listed here ', completed:false, id:123},
-        {text: 'todos will be listed here ', completed:false, id:456},
-        {text: 'todos will be listed here ', completed:false, id:789}
+        {text: 'this is mock redux todos ', completed:false, id:123},
+        {text: 'todos mock ', completed:false, id:456},
+        {text: 'todossnapple ', completed:false, id:789}
     ]
 }
 
 const rootReducer =(state=initialState,action)=>{
-    return state
+    switch (action.type){
+        case(ADD_TODO):
+            return({
+                ...state,
+                todos:[...state.todos,action.payload]
+            })
+        default:
+            return state
+    }
+    
 }
 
 export default rootReducer
