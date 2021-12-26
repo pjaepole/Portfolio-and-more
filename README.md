@@ -6,6 +6,9 @@ can add delete todos individually<br/>
 filter todo based on completion<br/>
 delete all completed todo<br/>
 can filter todos based on completion status<br/>
+redux version added<br/>
+    -can now add todo using redux
+    -can now toggle the todo's complete status by clicking on the todos
 
 # Getting Started with Create React App
 
