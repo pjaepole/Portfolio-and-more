@@ -1,5 +1,6 @@
 import {
-    ADD_TODO
+    ADD_TODO,
+    TODO_COMPLETED_TOGGLE
 } from '../actions'
 export const initialState ={
     todos:[
@@ -16,6 +17,17 @@ const rootReducer =(state=initialState,action)=>{
                 ...state,
                 todos:[...state.todos,action.payload]
             })
+        case(TODO_COMPLETED_TOGGLE):
+            return({
+                ...state,
+                todos:state.todos.map(function(todo){
+                    return action.payload===todo.id
+                    ?{
+                        ...todo,
+                        completed:!todo.completed
+                    }:todo
+                })
+            })
         default:
             return state
     }
@@ -23,3 +35,11 @@ const rootReducer =(state=initialState,action)=>{
 }
 
 export default rootReducer
+
+
+// return({
+//     ...state,
+//     todos:state.todos.map(todo=>{if(todo.id==action.payload){
+//        return todo.completed=!todo.completed
+//     } else {return console.log('shit')}})
+// })

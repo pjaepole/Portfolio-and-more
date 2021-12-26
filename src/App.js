@@ -19,6 +19,7 @@ function App(props) {
       <header>
         <h1>ToDo List</h1>
       </header>
+        <h2>Non redux</h2>
       <Form todos={todos} setFilter={setFilter} filter={filter} setTodos={setTodos} inputText={inputText} setInputText={setInputText}/>
       <TodoList todos={todos} setTodos={setTodos} filter={filter} setFilter={setFilter}/>
 
