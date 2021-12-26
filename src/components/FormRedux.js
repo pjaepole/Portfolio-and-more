@@ -18,7 +18,7 @@ function FormRedux(props){
         <div>
             <form>
                 <input onChange={todoInput} value={todos} type='text'></input>
-                <button onClick={submitTodoHandler}>adding mock todo</button>
+                <button onClick={submitTodoHandler}>add todo</button>
             </form>
         </div>
     )
