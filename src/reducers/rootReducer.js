@@ -20,13 +20,11 @@ const rootReducer =(state=initialState,action)=>{
         case(TODO_COMPLETED_TOGGLE):
             return({
                 ...state,
-                todos:state.todos.map(function(todo){
-                    return action.payload===todo.id
-                    ?{
-                        ...todo,
-                        completed:!todo.completed
-                    }:todo
-                })
+                todos:state.todos.map((todo)=>{if(todo.id===action.payload){
+                    return {...todo,completed:!todo.completed}
+                } else {
+                    return {...todo}
+                }})
             })
         default:
             return state
@@ -37,9 +35,14 @@ const rootReducer =(state=initialState,action)=>{
 export default rootReducer
 
 
-// return({
-//     ...state,
-//     todos:state.todos.map(todo=>{if(todo.id==action.payload){
-//        return todo.completed=!todo.completed
-//     } else {return console.log('shit')}})
-// })
+// case(TODO_COMPLETED_TOGGLE):
+//             return({
+//                 ...state,
+//                 todos:state.todos.map(function(todo){
+//                     return action.payload===todo.id
+//                     ?{
+//                         ...todo,
+//                         completed:!todo.completed
+//                     }:todo
+//                 })
+//             })
