@@ -1,8 +1,10 @@
 import {
     ADD_TODO,
     TODO_COMPLETED_TOGGLE,
-    TODO_DELETE
+    TODO_DELETE,
+    TODO_DELETE_ALL_COMPLETE
 } from '../actions'
+
 export const initialState ={
     todos:[
         {text: 'this is mock redux todos ', completed:false, id:123},
@@ -31,6 +33,11 @@ const rootReducer =(state=initialState,action)=>{
             return({
                 ...state,
                 todos:state.todos.filter((todo)=>{return todo.id!==action.payload})            
+            })
+        case(TODO_DELETE_ALL_COMPLETE):
+            return({
+                ...state,
+                todos:state.todos.filter((todo)=>{return todo.completed===false})
             })
         default:
             return state

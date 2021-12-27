@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { addTodo } from '../actions'
+import { addTodo,todoDeleteAllComplete } from '../actions'
 import {connect } from 'react-redux'
 function FormRedux(props){
     const [todos,setTodos]=useState("")
@@ -14,12 +14,16 @@ function FormRedux(props){
         props.dispatch(addTodo({text: todos, completed:false, id:Date.now()}))
        setTodos('')
     }
+    const deleteAllCompleteTodo=(e)=>{
+        e.preventDefault()
+        props.dispatch(todoDeleteAllComplete())
+    }
     return(
         <div>
             <form>
                 <input onChange={todoInput} value={todos} type='text'></input>
                 <button onClick={submitTodoHandler}>add todo</button>
-                <button>Remove Completed Todo</button>
+                <button onClick={deleteAllCompleteTodo}>Remove Completed Todo</button>
             </form>
         </div>
     )
