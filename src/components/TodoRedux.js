@@ -15,14 +15,18 @@ function TodoRedux(props){
                 <div className='todo'>
                     <h3 className='todoC' onClick={completeToggler}>{todo.text}</h3>
                     <h4>{todo.completed?'<-(complete)':'<-(incomplete)'}</h4>
-                    <button onClick={completeToggler}>Done</button>
-                    <button onClick={deleteHandler} >delete</button>
+                    <div className='todoButton'>
+                        <button onClick={completeToggler}>Done</button>
+                        <button onClick={deleteHandler} >delete</button>
+                    </div>
                 </div>:
                 <div className='todo'>
                     <h3 onClick={completeToggler}>{todo.text}</h3>
                     <h4>{todo.completed?'<-(complete)':'<-(incomplete)'}</h4>
-                    <button onClick={completeToggler}>Done</button>
-                    <button onClick={deleteHandler} >delete</button>
+                    <div className='todoButton'>
+                        <button onClick={completeToggler}>Done</button>
+                        <button onClick={deleteHandler} >delete</button>
+                    </div>
                 </div>
             }
         </div>

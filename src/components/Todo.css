@@ -8,3 +8,9 @@
     margin: 2vh 15%;
     border: solid;
 }
+
+.todoButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
