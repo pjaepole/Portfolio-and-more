@@ -19,6 +19,7 @@ function FormRedux(props){
             <form>
                 <input onChange={todoInput} value={todos} type='text'></input>
                 <button onClick={submitTodoHandler}>add todo</button>
+                <button>Remove Completed Todo</button>
             </form>
         </div>
     )

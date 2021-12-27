@@ -11,8 +11,20 @@ function TodoRedux(props){
     }
     return (
         <div>
-            <h3 onClick={completeToggler}>{todo.text} {todo.completed===true?'<-complete':'<-incomplete'}</h3>
-            <button onClick={deleteHandler} >delete</button>
+            {todo.completed?
+                <div className='todo'>
+                    <h3 className='todoC' onClick={completeToggler}>{todo.text}</h3>
+                    <h4>{todo.completed?'<-(complete)':'<-(incomplete)'}</h4>
+                    <button onClick={completeToggler}>Done</button>
+                    <button onClick={deleteHandler} >delete</button>
+                </div>:
+                <div className='todo'>
+                    <h3 onClick={completeToggler}>{todo.text}</h3>
+                    <h4>{todo.completed?'<-(complete)':'<-(incomplete)'}</h4>
+                    <button onClick={completeToggler}>Done</button>
+                    <button onClick={deleteHandler} >delete</button>
+                </div>
+            }
         </div>
     )
 }

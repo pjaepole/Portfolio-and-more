@@ -2,3 +2,9 @@
     text-decoration: line-through;
 }
 
+.todo {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2vh 15%;
+    border: solid;
+}

@@ -24,9 +24,9 @@ function App(props) {
       <TodoList todos={todos} setTodos={setTodos} filter={filter} setFilter={setFilter}/>
 
 
-      
-      <TodoListRedux />
+      <h2>Redux ver.</h2>
       <FormRedux/>
+      <TodoListRedux />
     </div>
   );
 }

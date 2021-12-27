@@ -6,8 +6,12 @@ function TodoListRedux (props) {
     
     return(
         <div>
-           {props.reduxtodos.map(todo=>(<TodoRedux key={todo.id} todo={todo}/>))}
-           {props.reduxtodos.map(todo=>(<div key={todo.id}>{todo.text}</div>))}
+            {props.reduxtodos.length<1?
+                <h4>Add Something To Do</h4>:
+                props.reduxtodos.map(todo=>(<TodoRedux key={todo.id} todo={todo}/>))
+            }
+           
+
         </div>
     )
 }
