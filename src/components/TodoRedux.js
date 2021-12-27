@@ -1,4 +1,4 @@
-import {todoCompletedToggle} from '../actions'
+import {todoCompletedToggle,todoDelete} from '../actions'
 import {connect } from 'react-redux'
 function TodoRedux(props){
     
@@ -6,10 +6,13 @@ function TodoRedux(props){
     let completeToggler=(e)=>{
         props.dispatch(todoCompletedToggle(todo.id))
     }
+    const deleteHandler=(e)=>{
+        console.log('deletebutton clicked')
+    }
     return (
         <div>
             <h3 onClick={completeToggler}>{todo.text} {todo.completed===true?'<-complete':'<-incomplete'}</h3>
-        
+            <button onClick={deleteHandler} >delete</button>
         </div>
     )
 }

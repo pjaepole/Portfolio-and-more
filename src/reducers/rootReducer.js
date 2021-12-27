@@ -1,6 +1,7 @@
 import {
     ADD_TODO,
-    TODO_COMPLETED_TOGGLE
+    TODO_COMPLETED_TOGGLE,
+    TODO_DELETE
 } from '../actions'
 export const initialState ={
     todos:[
@@ -25,6 +26,11 @@ const rootReducer =(state=initialState,action)=>{
                 } else {
                     return {...todo}
                 }})
+            })
+        case(TODO_DELETE):
+            return({
+                ...state,
+                todos:state.todos.filter((todo)=>{return todo.id!==action.payload})            
             })
         default:
             return state
