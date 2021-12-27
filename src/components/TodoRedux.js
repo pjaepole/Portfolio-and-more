@@ -7,7 +7,7 @@ function TodoRedux(props){
         props.dispatch(todoCompletedToggle(todo.id))
     }
     const deleteHandler=(e)=>{
-        console.log('deletebutton clicked')
+        props.dispatch(todoDelete(todo.id))
     }
     return (
         <div>

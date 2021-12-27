@@ -7,8 +7,9 @@ filter todo based on completion<br/>
 delete all completed todo<br/>
 can filter todos based on completion status<br/>
 redux version added<br/>
-    -can now add todo using redux<br/>
-    -can now toggle the todo's complete status by clicking on the todos<br/>
+----can now add todo using redux<br/>
+----can now toggle the todo's complete status by clicking on the todos<br/>
+----can now delete todos by clicking the delete button
 
 # Getting Started with Create React App
 
