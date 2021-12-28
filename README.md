@@ -9,7 +9,9 @@ can filter todos based on completion status<br/>
 redux version added<br/>
 ----can now add todo using redux<br/>
 ----can now toggle the todo's complete status by clicking on the todos<br/>
-----can now delete todos by clicking the delete button
+----can now delete todos by clicking the delete button<br/>
+----can now filter todos by selecting option from drop down selection<br/>
+----added combineReducer to the reducer 
 
 # Getting Started with Create React App
 
