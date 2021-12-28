@@ -13,7 +13,7 @@ export const initialState ={
     ]
 }
 
-const rootReducer =(state=initialState,action)=>{
+const todoReducer =(state=initialState,action)=>{
     switch (action.type){
         case(ADD_TODO):
             return({
@@ -45,7 +45,7 @@ const rootReducer =(state=initialState,action)=>{
     
 }
 
-export default rootReducer
+export default todoReducer
 
 
 // case(TODO_COMPLETED_TOGGLE):
