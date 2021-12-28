@@ -2,7 +2,6 @@ export const ADD_TODO="ADD_TODO";
 export const TODO_COMPLETED_TOGGLE="TODO_COMPLETED_TOGGLE"
 export const TODO_DELETE="TODO_DELETE"
 export const TODO_DELETE_ALL_COMPLETE="TODO_DELETE_ALL_COMPLETE"
-export const TODO_FILTER_BY_COMPLETED_TRUE_FALSE="TODO_FILTER_BY_COMPLETED_TRUE_FALSE"
 export const TODO_FILTER_BY_COMPLETED_DEFAULT="TODO_FILTER_BY_COMPLETED_DEFAULT"
 
 export const addTodo=(todo)=>{
@@ -19,10 +18,6 @@ export const todoDelete=(id)=>{
 
 export const todoDeleteAllComplete=()=>{
     return({type:TODO_DELETE_ALL_COMPLETE})
-}
-
-export const todoFilterByCompletedTrueFalse=(completed)=>{
-    return ({type:TODO_FILTER_BY_COMPLETED_TRUE_FALSE, payload:completed})
 }
 
 export const todoFilterByCompletedDefault=(filter)=>{

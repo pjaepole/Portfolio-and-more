@@ -4,7 +4,6 @@ import TodoRedux from './TodoRedux'
 
 function TodoListRedux (props) {
     const {reduxtodos, filter}=props
-    console.log(filter)
     let fil=reduxtodos.filter((todo)=>(todo.completed.toString()===filter))
     return(
         <div>
@@ -13,11 +12,11 @@ function TodoListRedux (props) {
                 reduxtodos.map(todo=>(<TodoRedux key={todo.id} todo={todo}/>))
             }
            
-            <h1>checking filter is working</h1>
+            <h1>Todos filtered</h1>
             {filter==="all"?
-                <ol>{reduxtodos.length===0?'add something to do':''}{reduxtodos.map(todo=>{return <li key={todo.id}><TodoRedux todo={todo} key={todo.id}/></li>})}</ol>
+                <ul>{reduxtodos.length===0?'add something to do':''}{reduxtodos.map(todo=>{return <li key={todo.id}><TodoRedux todo={todo} key={todo.id}/></li>})}</ul>
                 :
-                <ol>{fil.map(todo=>{return <li key={todo.id}><TodoRedux todo={todo} key={todo.id}/></li>})}{fil.length===0?"nothing yet":""}</ol>
+                <ul>{fil.map(todo=>{return <li key={todo.id}><TodoRedux todo={todo} key={todo.id}/></li>})}{fil.length===0?"nothing filtered yet, use dropdown select option to change filter":""}</ul>
             }
         </div>
     )

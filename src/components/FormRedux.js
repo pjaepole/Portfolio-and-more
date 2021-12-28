@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 
 import { addTodo,
         todoDeleteAllComplete,
-        todoFilterByCompletedTrueFalse,
         todoFilterByCompletedDefault} from '../actions'
 import {connect } from 'react-redux'
 function FormRedux(props){
@@ -41,7 +40,7 @@ function FormRedux(props){
     )
 }
 const mapStateToProps = (state)=>{
-    console.log(state)
+    
     return {
       reduxtodos:state.todoReducer.todos,
       filter:state.todoReducer.completeView
