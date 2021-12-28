@@ -2,18 +2,20 @@ import {
     ADD_TODO,
     TODO_COMPLETED_TOGGLE,
     TODO_DELETE,
-    TODO_DELETE_ALL_COMPLETE
+    TODO_DELETE_ALL_COMPLETE,
+    TODO_FILTER_BY_COMPLETED_DEFAULT
 } from '../actions'
 
 export const initialState ={
     todos:[
         {text: 'this is mock redux todos ', completed:false, id:123},
-        {text: 'todos mock ', completed:false, id:456},
-        {text: 'todossnapple ', completed:false, id:789}
-    ]
+        {text: 'make at least one commit a day', completed:false, id:456},
+        {text: 'sigh', completed:false, id:789}
+    ],
+    completeView:"true"
 }
 
-const rootReducer =(state=initialState,action)=>{
+const todoReducer =(state=initialState,action)=>{
     switch (action.type){
         case(ADD_TODO):
             return({
@@ -39,13 +41,19 @@ const rootReducer =(state=initialState,action)=>{
                 ...state,
                 todos:state.todos.filter((todo)=>{return todo.completed===false})
             })
+        case(TODO_FILTER_BY_COMPLETED_DEFAULT):
+            return({
+                ...state,
+                completeView:action.payload
+            })
+            
         default:
             return state
     }
     
 }
 
-export default rootReducer
+export default todoReducer
 
 
 // case(TODO_COMPLETED_TOGGLE):
