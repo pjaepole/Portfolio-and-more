@@ -19,7 +19,7 @@ function TodoListRedux (props) {
 
 const mapStateToProps = (state)=>{
     return {
-      reduxtodos:state.todos
+      reduxtodos:state.todoReducer.todos
     }
   }
 export default connect(mapStateToProps)(TodoListRedux)
