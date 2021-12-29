@@ -14,8 +14,12 @@ function App(props) {
   const [inputText, setInputText]=useState("");
   const [todos, setTodos]=useState([]);
   const [filter, setFilter]=useState('all')
+   let time= new Date()
+ time=time.toLocaleTimeString()
   return (
     <div className="App">
+    
+{console.log(time)}
       <header>
         <h1>ToDo List</h1>
       </header>

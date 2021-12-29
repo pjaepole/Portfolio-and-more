@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-
+import { Button } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { addTodo,
         todoDeleteAllComplete,
         todoFilterByCompletedDefault} from '../actions'
@@ -30,6 +31,7 @@ function FormRedux(props){
                 <input onChange={todoInput} value={todos} type='text'></input>
                 <button onClick={submitTodoHandler}>add todo</button>
                 <button onClick={deleteAllCompleteTodo}>Remove Completed Todo</button>
+                <Button onClick={deleteAllCompleteTodo}>Remove Completed Todo</Button>
                 <select onChange={optionClickHandler}>
                     <option value='all' >Show All</option>
                     <option value='true' >Show Complete</option>
