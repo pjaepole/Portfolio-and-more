@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button } from 'react-bootstrap';
+import { Button,InputGroup,FormControl,Form } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { addTodo,
         todoDeleteAllComplete,
@@ -27,16 +27,22 @@ function FormRedux(props){
     }
     return(
         <div>
-            <form>
-                <input onChange={todoInput} value={todos} type='text'></input>
-                <button onClick={submitTodoHandler}>add todo</button>
-                <button onClick={deleteAllCompleteTodo}>Remove Completed Todo</button>
-                <Button onClick={deleteAllCompleteTodo}>Remove Completed Todo</Button>
-                <select onChange={optionClickHandler}>
-                    <option value='all' >Show All</option>
-                    <option value='true' >Show Complete</option>
-                    <option value='false' >Show Incomplete</option>
-                </select>
+            <form onSubmit={submitTodoHandler}>
+                <InputGroup className="mb-3">
+                    <FormControl
+                    placeholder="What to do....."
+                    aria-describedby="basic-addon2"
+                    onChange={todoInput} value={todos} type='text'
+                    />
+                    <Button onClick={submitTodoHandler}>Add Todo</Button>
+                    <Button variant="danger" onClick={deleteAllCompleteTodo}>Remove Completed Todo</Button>
+                </InputGroup>
+                <Form.Select aria-label="Default select example" onChange={optionClickHandler}>
+                        
+                        <option value='all' >Show All</option>
+                        <option value='true' >Show Complete</option>
+                        <option value='false' >Show Incomplete</option>
+                </Form.Select>
             </form>
         </div>
     )
