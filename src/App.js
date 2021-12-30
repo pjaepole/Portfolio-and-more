@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './App.css';
 //import components
+import Clock from './components/Clock'
 import Form from './components/Form'
 import FormRedux from './components/FormRedux';
 import TodoList from './components/TodoList';
@@ -19,7 +20,7 @@ function App(props) {
   return (
     <div className="App">
     
-{console.log(time)}
+      <Clock></Clock>
       <header>
         <h1>ToDo List</h1>
       </header>
