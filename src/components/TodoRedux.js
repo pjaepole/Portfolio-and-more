@@ -23,14 +23,14 @@ function TodoRedux(props){
             <InputGroup className="mb-3 todo">
                 <InputGroup.Checkbox aria-label="Checkbox for following text input" onChange={completeToggler} checked={check}/>
                 <FormControl className='todoC' onClick={completeToggler} defaultValue={todo.text} aria-label="Text input with checkbox" />
-                <Button variant="secondary" onClick={completeToggler}>Done</Button>
+                <Button variant="dark" onClick={completeToggler}>Done</Button>
                 <Button variant="outline-secondary" onClick={deleteHandler}>Delete</Button>
             </InputGroup>
             :
             <InputGroup className="mb-3 todo">
                 <InputGroup.Checkbox aria-label="Checkbox for following text input" onChange={completeToggler} checked={check}/>
                 <FormControl onClick={completeToggler} defaultValue={todo.text}  aria-label="Text input with checkbox" />
-                <Button variant="secondary" onClick={completeToggler}>Done</Button>
+                <Button variant="dark" onClick={completeToggler}>Done</Button>
                 <Button variant="outline-secondary" onClick={deleteHandler}>Delete</Button>
             </InputGroup>
         }

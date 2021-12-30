@@ -19,7 +19,7 @@ function Clock(){
                     <img className='shiaImg' src={shia} alt='just do it shia'></img>
                 </div>
                 <div>
-                <h3 className='clockTime'>{calendar}</h3>
+                <h4 className='clockTime'>{calendar}</h4>
                 <h1 className='clockTime'>{clock}</h1>
                 </div>
             </div>
