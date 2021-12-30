@@ -39,7 +39,7 @@ function FormRedux(props){
                 </InputGroup>
                 <Form.Select aria-label="Default select example" onChange={optionClickHandler}>
                         
-                        <option value='all' >Show All</option>
+                        <option value='All' >Show All</option>
                         <option value='true' >Show Complete</option>
                         <option value='false' >Show Incomplete</option>
                 </Form.Select>

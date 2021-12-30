@@ -1,5 +1,9 @@
 import {todoCompletedToggle,todoDelete} from '../actions'
 import {connect } from 'react-redux'
+import { InputGroup,
+        FormControl,
+        Button } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 function TodoRedux(props){
     
     const {todo}=props
@@ -11,24 +15,22 @@ function TodoRedux(props){
     }
     return (
         <div>
-            {todo.completed?
-                <div className='todo'>
-                    <h3 className='todoC' onClick={completeToggler}>{todo.text}</h3>
-                    <h4>{todo.completed?'<-(complete)':'<-(incomplete)'}</h4>
-                    <div className='todoButton'>
-                        <button onClick={completeToggler}>Done</button>
-                        <button onClick={deleteHandler} >delete</button>
-                    </div>
-                </div>:
-                <div className='todo'>
-                    <h3 onClick={completeToggler}>{todo.text}</h3>
-                    <h4>{todo.completed?'<-(complete)':'<-(incomplete)'}</h4>
-                    <div className='todoButton'>
-                        <button onClick={completeToggler}>Done</button>
-                        <button onClick={deleteHandler} >delete</button>
-                    </div>
-                </div>
-            }
+            
+        {todo.completed?
+            <InputGroup className="mb-3 todo">
+                <InputGroup.Checkbox aria-label="Checkbox for following text input" defaultChecked/>
+                <FormControl className='todoC' onClick={completeToggler} defaultValue={todo.text} aria-label="Text input with checkbox" />
+                <Button onClick={completeToggler}>Done</Button>
+                <Button variant="danger" onClick={deleteHandler}>Delete</Button>
+            </InputGroup>
+            :
+            <InputGroup className="mb-3">
+                <InputGroup.Checkbox aria-label="Checkbox for following text input" />
+                <FormControl onClick={completeToggler} defaultValue={todo.text}  aria-label="Text input with checkbox" />
+                <Button onClick={completeToggler}>Done</Button>
+                <Button variant="danger" onClick={deleteHandler}>Delete</Button>
+            </InputGroup>
+        }
         </div>
     )
 }
