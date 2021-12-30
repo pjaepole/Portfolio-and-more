@@ -28,6 +28,9 @@ function FormRedux(props){
     return(
         <div>
             <form onSubmit={submitTodoHandler}>
+                    <Button className='todoTitle'  variant="dark" size="lg">
+                    Todo List
+                    </Button>
                 <InputGroup className="mb-3">
                     <FormControl
                     placeholder="What to do....."

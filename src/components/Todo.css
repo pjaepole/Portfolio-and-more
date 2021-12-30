@@ -1,3 +1,4 @@
+
 .todoC {
     text-decoration: line-through;
 }
@@ -5,12 +6,32 @@
 .todo {
     display: flex;
     justify-content: space-evenly;
-    margin: 2vh 15%;
-    border: solid;
+    margin: 2vh 0vh ;
+    padding: 0 5%;
 }
 
 .todoButton {
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+.clockDiv{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 10%;
+    margin: 0 15%;
+    margin-top: 2vh;
+}
+.clockTime{
+    
+    width:100%;
+}
+.shiaImg {
+    height: 30vh;
+}
+.todoTitle{
+    width:100%;
+    margin-bottom: 2vh;
+   
 }

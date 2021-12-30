@@ -21,12 +21,9 @@ function TodoListRedux (props) {
     return(
         
         <div>
-            {reduxtodos.length<1?
-                <h4>Add Something To Do</h4>:
-                reduxtodos.map(todo=>(<TodoRedux key={todo.id} todo={todo}/>))
-            }
-           
-            <h1>{displayCompletion} Todos </h1>
+            <div className='todo'>
+                <h1>{displayCompletion} Todos </h1>
+            </div>
             {fil.length<1?
                 <div>There are nothing {displayCompletion}{reduxtodos.length===0?'add something to do':''}{fil.map(todo=>{return <TodoRedux todo={todo} key={todo.id}/>})}</div>
                 :
