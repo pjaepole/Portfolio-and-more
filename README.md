@@ -11,7 +11,12 @@ redux version added<br/>
 ----can now toggle the todo's complete status by clicking on the todos<br/>
 ----can now delete todos by clicking the delete button<br/>
 ----can now filter todos by selecting option from drop down selection<br/>
-----added combineReducer to the reducer 
+----added combineReducer to the reducer<br/>
+Styling added with bootstrap and react-bootstrap for all components<br/>
+Regular components without redux removed <br/>
+Added just do it shia img for logo<br/>
+Added date and time (clock)component<br/>
+imported google font for date and time<br/>
 
 # Getting Started with Create React App
 
