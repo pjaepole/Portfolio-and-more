@@ -4,6 +4,7 @@ import TodoRedux from './TodoRedux'
 
 function TodoListRedux (props) {
     const {reduxtodos, filt}=props
+    console.log(reduxtodos)
     let fil
     let displayCompletion
     if(filt==='All'){
@@ -25,7 +26,7 @@ function TodoListRedux (props) {
                 <h1>{displayCompletion} Todos </h1>
             </div>
             {fil.length<1?
-                <div>There are nothing {displayCompletion}{reduxtodos.length===0?'add something to do':''}{fil.map(todo=>{return <TodoRedux todo={todo} key={todo.id}/>})}</div>
+                <div className='todo'>Under {displayCompletion} Filter There Is Nothing----{reduxtodos.length===0?'add something to do':''}{fil.map(todo=>{return <TodoRedux todo={todo} key={todo.id}/>})}</div>
                 :
                 <div>{fil.map(todo=>{return <TodoRedux todo={todo} key={todo.id}/>})}{fil.length===0?"nothing filtered yet, use dropdown select option to change filter":""}</div>
             }

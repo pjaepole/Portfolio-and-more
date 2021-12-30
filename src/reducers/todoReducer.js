@@ -3,7 +3,8 @@ import {
     TODO_COMPLETED_TOGGLE,
     TODO_DELETE,
     TODO_DELETE_ALL_COMPLETE,
-    TODO_FILTER_BY_COMPLETED_DEFAULT
+    TODO_FILTER_BY_COMPLETED_DEFAULT,
+    TODO_PERSISTANT
 } from '../actions'
 
 export const initialState ={
@@ -17,6 +18,11 @@ export const initialState ={
 
 const todoReducer =(state=initialState,action)=>{
     switch (action.type){
+        case(TODO_PERSISTANT):
+            return({
+                ...state,
+                todos:action.payload
+            })
         case(ADD_TODO):
             return({
                 ...state,

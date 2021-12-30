@@ -1,23 +1,47 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import { Button,InputGroup,FormControl,Form } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { addTodo,
         todoDeleteAllComplete,
-        todoFilterByCompletedDefault} from '../actions'
+        todoFilterByCompletedDefault,
+        todoPersistant} from '../actions'
 import {connect } from 'react-redux'
 function FormRedux(props){
-    
-    const [todos,setTodos]=useState("")
-    const todoInput=(e)=>{
-        setTodos(e.target.value)
+    const setlocal=()=>{
+        localStorage.setItem('todos',JSON.stringify(props.reduxtodos))
     }
+    const getlocal=()=>{
+      console.log('thisis getlocal',(localStorage.getItem('todos')) )
+      if(localStorage.getItem('todos')===null){
+          return 
+      }
+      props.dispatch(todoPersistant(JSON.parse(localStorage.getItem('todos'))))
+    }
+    useEffect(()=>{
+        getlocal()
+    },[])
+    useEffect(()=>{
+        setlocal()
+    },[props.reduxtodos])
     
+    const initialFormvalue={
+        todo:''
+    }
+    const [formvalues,setFormvalues]=useState(initialFormvalue)
+    const todoInput=(e)=>{
+        setFormvalues({
+            ...formvalues,
+            [e.target.name]:e.target.value
+        })
+    }
     
     const submitTodoHandler=(e)=>{
         e.preventDefault()
-        props.dispatch(addTodo({text: todos, completed:false, id:Date.now()}))
-       setTodos('')
-    }
+        props.dispatch(addTodo({text: formvalues.todo, completed:false, id:Date.now()}))
+        setFormvalues({
+           todo:''
+       })
+    } 
     const deleteAllCompleteTodo=(e)=>{
         e.preventDefault()
         props.dispatch(todoDeleteAllComplete())
@@ -33,9 +57,9 @@ function FormRedux(props){
                     </Button>
                 <InputGroup className="mb-3">
                     <FormControl
-                    placeholder="What to do....."
-                    aria-describedby="basic-addon2"
-                    onChange={todoInput} value={todos} type='text'
+                        placeholder="What to do....."
+                        aria-describedby="basic-addon2"
+                        onChange={todoInput} value={formvalues.todo} name='todo' type='text'
                     />
                     <Button variant="dark" onClick={submitTodoHandler}>Add Todo</Button>
                     <Button variant="outline-secondary" onClick={deleteAllCompleteTodo}>Remove Completed Todo</Button>
