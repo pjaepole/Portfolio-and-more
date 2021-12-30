@@ -12,7 +12,7 @@ export const initialState ={
         {text: 'make at least one commit a day', completed:false, id:456},
         {text: 'sigh', completed:false, id:789}
     ],
-    completeView:"true"
+    completeView:'All'
 }
 
 const todoReducer =(state=initialState,action)=>{
