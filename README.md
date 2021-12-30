@@ -1,6 +1,8 @@
 This is my personal project for Todo list app.<br/>
 building a Todo list app based on functionality I think it can be useful for myself and other people.<br/>
-deployed here > https://todo-app-ten-smoky.vercel.app/ <br/>
+deployed here > <a href="https://todo-app-ten-smoky.vercel.app/"> vercel</a> <br/>
+
+ 
 
 can add delete todos individually<br/>
 filter todo based on completion<br/>
