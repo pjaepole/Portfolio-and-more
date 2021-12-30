@@ -37,8 +37,8 @@ function FormRedux(props){
                     aria-describedby="basic-addon2"
                     onChange={todoInput} value={todos} type='text'
                     />
-                    <Button onClick={submitTodoHandler}>Add Todo</Button>
-                    <Button variant="danger" onClick={deleteAllCompleteTodo}>Remove Completed Todo</Button>
+                    <Button variant="secondary" onClick={submitTodoHandler}>Add Todo</Button>
+                    <Button variant="outline-secondary" onClick={deleteAllCompleteTodo}>Remove Completed Todo</Button>
                 </InputGroup>
                 <Form.Select aria-label="Default select example" onChange={optionClickHandler}>
                         
