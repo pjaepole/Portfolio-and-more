@@ -1,6 +1,6 @@
 This is my personal project for Todo list app.<br/>
 building a Todo list app based on functionality I think it can be useful for myself and other people.<br/>
-deployed here > <a href="https://todo-app-ten-smoky.vercel.app/"> vercel</a> <br/>
+deployed here > <a href="https://todo-app-ten-smoky.vercel.app/" target="_blank"> vercel</a> <br/>
 
  
 
