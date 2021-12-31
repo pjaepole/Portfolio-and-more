@@ -12,7 +12,7 @@ function App(props) {
    const {dtheme}=props
  
   return (
-    <div className={dtheme?'dark':'light'}>
+    <div className={dtheme?'dark':''}>
       <Clock/>
       <FormRedux/>
       <TodoListRedux />

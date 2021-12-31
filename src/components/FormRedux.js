@@ -63,21 +63,21 @@ function FormRedux(props){
         props.dispatch(darkmodeToggle())
     }
     return(
-        <div>
-            <form onSubmit={submitTodoHandler}>
+        <div className={props.dtheme?'dark':''}>
+            <form onSubmit={submitTodoHandler} >
                     <Button onClick={darkmodeHandler}className='todoTitle'  variant="dark" size="lg">
                    {props.dtheme?<span>Todo List &#127761;</span>:<span>Todo List &#127765;</span> } 
                     </Button>
                 <InputGroup className="mb-3">
                     <div className='filterSelect'>
-                        <Form.Select  aria-label="Default select example" onChange={optionClickHandler}> 
-                                <option value='All' >Show All</option>
-                                <option value='true' >Show Complete</option>
-                                <option value='false' >Show Incomplete</option>
+                        <Form.Select className={props.dtheme?'dark':''} aria-label="Default select example" onChange={optionClickHandler}> 
+                                <option  value='All' >Show All</option>
+                                <option  value='true' >Show Complete</option>
+                                <option  value='false' >Show Incomplete</option>
                         </Form.Select>
                     </div>
                     <FormControl
-                        className='dark'
+                        className={props.dtheme?'dark':''}
                         placeholder="Add What To Do....."
                         aria-describedby="basic-addon2"
                         onChange={todoInput} value={formvalues.todo} name='todo' type='text'

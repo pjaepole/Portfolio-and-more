@@ -20,6 +20,7 @@ Added just do it shia img for logo<br/>
 Added date and time (clock)component<br/>
 imported google font for date and time<br/>
 Todos data persistence added by using localstorage<br/>
+dark mode added<br/>
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
