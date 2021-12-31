@@ -4,7 +4,7 @@ export const TODO_DELETE="TODO_DELETE"
 export const TODO_DELETE_ALL_COMPLETE="TODO_DELETE_ALL_COMPLETE"
 export const TODO_FILTER_BY_COMPLETED_DEFAULT="TODO_FILTER_BY_COMPLETED_DEFAULT"
 export const TODO_PERSISTANT="TODO_PERSISTANT"
-
+export const DARKMODE_TOGGLE="DARKMODE_TOGGLE"
 
 export const addTodo=(todo)=>{
     return({type:ADD_TODO, payload:todo})
@@ -28,4 +28,8 @@ export const todoFilterByCompletedDefault=(filter)=>{
 
 export const todoPersistant=(todos)=>{
     return({type:TODO_PERSISTANT, payload:todos})
+}
+
+export const darkmodeToggle=()=>{
+    return({type:DARKMODE_TOGGLE})
 }

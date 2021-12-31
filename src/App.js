@@ -4,25 +4,27 @@ import Clock from './components/Clock';
 import FormRedux from './components/FormRedux';
 import TodoListRedux from './components/TodoListRedux';
 import { connect } from 'react-redux'
+import Footer from './components/Footer'
 
 
 
 function App(props) {
+   const {dtheme}=props
  
-  
-   
   return (
-    <div className="App">
+    <div className={dtheme?'dark':'light'}>
       <Clock/>
       <FormRedux/>
       <TodoListRedux />
+      <Footer/>
     </div>
   );
 }
 
 const mapStateToProps = (state)=>{
+  console.log('this is',state)
   return {
-    reduxtodos:state.todos
+    dtheme:state.todoReducer.darkmode
   }
 }
 

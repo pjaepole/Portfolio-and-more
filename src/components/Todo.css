@@ -1,4 +1,9 @@
-
+.dark{
+    background-color: #343a40;
+}
+.light{
+    
+}
 .todoC {
     text-decoration: line-through;
 }
@@ -21,7 +26,7 @@
     justify-content: space-around;
     padding: 0 10%;
     margin: 0 15%;
-    margin-top: 2vh;
+    margin-top: 0vh;
 }
 .clockTime{
     font-family: 'Press Start 2P', cursive;
@@ -37,4 +42,8 @@
 }
 .filterSelect {
     width:13%;
+}
+
+.todolist{
+    padding-bottom: 5vh;;
 }

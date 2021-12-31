@@ -1,17 +1,27 @@
 import React, { useState,useEffect } from 'react'
-import { Button,InputGroup,FormControl,Form } from 'react-bootstrap';
+
+import { Button,
+        InputGroup,
+        FormControl,
+        Form } from 'react-bootstrap';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import { addTodo,
         todoDeleteAllComplete,
         todoFilterByCompletedDefault,
-        todoPersistant} from '../actions'
+        todoPersistant,
+        darkmodeToggle} from '../actions'
+
 import {connect } from 'react-redux'
+
+
+
 function FormRedux(props){
     const setlocal=()=>{
         localStorage.setItem('todos',JSON.stringify(props.reduxtodos))
     }
     const getlocal=()=>{
-      console.log('thisis getlocal',(localStorage.getItem('todos')) )
       if(localStorage.getItem('todos')===null){
           return 
       }
@@ -49,11 +59,14 @@ function FormRedux(props){
     const optionClickHandler=(e)=>{
           props.dispatch(todoFilterByCompletedDefault(e.target.value))
     }
+    const darkmodeHandler=()=>{
+        props.dispatch(darkmodeToggle())
+    }
     return(
         <div>
             <form onSubmit={submitTodoHandler}>
-                    <Button className='todoTitle'  variant="dark" size="lg">
-                    Todo List
+                    <Button onClick={darkmodeHandler}className='todoTitle'  variant="dark" size="lg">
+                   {props.dtheme?<span>Todo List &#127761;</span>:<span>Todo List &#127765;</span> } 
                     </Button>
                 <InputGroup className="mb-3">
                     <div className='filterSelect'>
@@ -64,6 +77,7 @@ function FormRedux(props){
                         </Form.Select>
                     </div>
                     <FormControl
+                        className='dark'
                         placeholder="Add What To Do....."
                         aria-describedby="basic-addon2"
                         onChange={todoInput} value={formvalues.todo} name='todo' type='text'
@@ -80,7 +94,8 @@ const mapStateToProps = (state)=>{
     
     return {
       reduxtodos:state.todoReducer.todos,
-      filter:state.todoReducer.completeView
+      filter:state.todoReducer.completeView,
+      dtheme:state.todoReducer.darkmode
     }
   }
 export default connect(mapStateToProps)(FormRedux)

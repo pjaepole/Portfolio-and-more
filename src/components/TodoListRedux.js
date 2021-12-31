@@ -4,7 +4,6 @@ import TodoRedux from './TodoRedux'
 
 function TodoListRedux (props) {
     const {reduxtodos, filt}=props
-    console.log(reduxtodos)
     let fil
     let displayCompletion
     if(filt==='All'){
