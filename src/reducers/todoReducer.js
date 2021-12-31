@@ -4,7 +4,8 @@ import {
     TODO_DELETE,
     TODO_DELETE_ALL_COMPLETE,
     TODO_FILTER_BY_COMPLETED_DEFAULT,
-    TODO_PERSISTANT
+    TODO_PERSISTANT,
+    DARKMODE_TOGGLE
 } from '../actions'
 
 export const initialState ={
@@ -13,11 +14,17 @@ export const initialState ={
         {text: 'make at least one commit a day', completed:false, id:456},
         {text: 'sigh', completed:false, id:789}
     ],
-    completeView:'All'
+    completeView:'All',
+    darkmode:true
 }
 
 const todoReducer =(state=initialState,action)=>{
     switch (action.type){
+        case(DARKMODE_TOGGLE):
+            return({
+                ...state,
+                darkmode:!state.darkmode
+            })
         case(TODO_PERSISTANT):
             return({
                 ...state,

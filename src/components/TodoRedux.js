@@ -7,8 +7,7 @@ import { InputGroup,
 import 'bootstrap/dist/css/bootstrap.min.css';
 function TodoRedux(props){
     const [check,setCheck]=useState(false)
-    const {todo}=props
-    
+    const {todo, dtheme}=props
     let completeToggler=(e)=>{
         props.dispatch(todoCompletedToggle(todo.id))
         setCheck(!check)
@@ -20,16 +19,16 @@ function TodoRedux(props){
         <div>
             
         {todo.completed?
-            <InputGroup className="mb-3 todo">
-                <InputGroup.Checkbox aria-label="Checkbox for following text input" onChange={completeToggler} checked={check}/>
-                <FormControl className='todoC' onClick={completeToggler} defaultValue={todo.text} aria-label="Text input with checkbox" />
+            <InputGroup className={dtheme?'mb-3 todo dark':'mb-3 todo'}>
+                <InputGroup.Checkbox className={dtheme?'dark':''}aria-label="Checkbox for following text input" onChange={completeToggler} checked={check}/>
+                <FormControl className={dtheme?'todoC dark':'todoC'} onClick={completeToggler} defaultValue={todo.text} aria-label="Text input with checkbox" />
                 <Button variant="dark" onClick={completeToggler}>Done</Button>
                 <Button variant="outline-secondary" onClick={deleteHandler}>Delete</Button>
             </InputGroup>
             :
-            <InputGroup className="mb-3 todo">
-                <InputGroup.Checkbox aria-label="Checkbox for following text input" onChange={completeToggler} checked={check}/>
-                <FormControl onClick={completeToggler} defaultValue={todo.text}  aria-label="Text input with checkbox" />
+            <InputGroup className={dtheme?'mb-3 todo dark':'mb-3 todo'}>
+                <InputGroup.Checkbox className={dtheme?'dark':''}aria-label="Checkbox for following text input" onChange={completeToggler} checked={check}/>
+                <FormControl className={dtheme?'dark':''} onClick={completeToggler} defaultValue={todo.text}  aria-label="Text input with checkbox" />
                 <Button variant="dark" onClick={completeToggler}>Done</Button>
                 <Button variant="outline-secondary" onClick={deleteHandler}>Delete</Button>
             </InputGroup>
@@ -39,7 +38,7 @@ function TodoRedux(props){
 }
 const mapStateToProps = (state)=>{
     return {
-      reduxtodos:state.todos
+      dtheme:state.todoReducer.darkmode
     }
   }
 export default connect(mapStateToProps)(TodoRedux)
