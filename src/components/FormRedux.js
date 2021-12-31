@@ -56,13 +56,6 @@ function FormRedux(props){
                     Todo List
                     </Button>
                 <InputGroup className="mb-3">
-                    <FormControl
-                        placeholder="What to do....."
-                        aria-describedby="basic-addon2"
-                        onChange={todoInput} value={formvalues.todo} name='todo' type='text'
-                    />
-                    <Button variant="dark" onClick={submitTodoHandler}>Add Todo</Button>
-                    <Button variant="outline-secondary" onClick={deleteAllCompleteTodo}>Remove Completed Todo</Button>
                     <div className='filterSelect'>
                         <Form.Select  aria-label="Default select example" onChange={optionClickHandler}> 
                                 <option value='All' >Show All</option>
@@ -70,6 +63,14 @@ function FormRedux(props){
                                 <option value='false' >Show Incomplete</option>
                         </Form.Select>
                     </div>
+                    <FormControl
+                        placeholder="Add What To Do....."
+                        aria-describedby="basic-addon2"
+                        onChange={todoInput} value={formvalues.todo} name='todo' type='text'
+                    />
+                    <Button variant="dark" onClick={submitTodoHandler}>Add Todo</Button>
+                    <Button variant="outline-secondary" onClick={deleteAllCompleteTodo}>Remove Completed Todo</Button>
+                    
                 </InputGroup>
             </form>
         </div>
