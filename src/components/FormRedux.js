@@ -18,19 +18,21 @@ import {connect } from 'react-redux'
 
 
 function FormRedux(props){
-    const setlocal=()=>{
-        localStorage.setItem('todos',JSON.stringify(props.reduxtodos))
-    }
-    const getlocal=()=>{
-      if(localStorage.getItem('todos')===null){
-          return 
-      }
-      props.dispatch(todoPersistant(JSON.parse(localStorage.getItem('todos'))))
-    }
+   
+    
     useEffect(()=>{
+        const getlocal=()=>{
+            if(localStorage.getItem('todos')===null){
+                return 
+            }
+            props.dispatch(todoPersistant(JSON.parse(localStorage.getItem('todos'))))
+          }
         getlocal()
     },[])
     useEffect(()=>{
+        const setlocal=()=>{
+            localStorage.setItem('todos',JSON.stringify(props.reduxtodos))
+        }
         setlocal()
     },[props.reduxtodos])
     

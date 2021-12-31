@@ -10,9 +10,12 @@ import {
 
 export const initialState ={
     todos:[
+        {text: 'Thank you for stopping by', completed:false, id:789},
+        {text: 'in order to use nightmode click the long Todo List bar', completed:false, id:781329},
+        {text: 'Have a nice day', completed:false, id:4564},
         {text: 'this is mock redux todos ', completed:false, id:123},
         {text: 'make at least one commit a day', completed:false, id:456},
-        {text: 'sigh', completed:false, id:789}
+        {text: 'gotta remove the issues', completed:false, id:45612}
     ],
     completeView:'All',
     darkmode:true
