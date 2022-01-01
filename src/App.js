@@ -22,7 +22,6 @@ function App(props) {
 }
 
 const mapStateToProps = (state)=>{
-  console.log('this is',state)
   return {
     dtheme:state.todoReducer.darkmode
   }

@@ -1,9 +1,8 @@
-body{
-    background-color: #343a40
-}
+
 .dark{
     background-color: #343a40 !important;
     color: #adb5bd !important;
+    height:100%;
 }
 
 .todoC {
@@ -46,3 +45,10 @@ body{
     width:13%;
 }
 
+.todolist{
+    height:100vh;
+}
+
+.footer {
+    height:36vh;
+}
