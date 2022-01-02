@@ -1,8 +1,14 @@
 
+.newsList{
+    display:flex;
+    justify-content: space-evenly;
+}
+.newsCard{
+    margin-left: 3%;
+}
 .dark{
     background-color: #343a40 !important;
     color: #adb5bd !important;
-    height:100%;
 }
 
 .todoC {
@@ -12,10 +18,12 @@
 .todo {
     display: flex;
     justify-content: space-evenly;
-    margin: 2vh 0vh ;
     padding: 0 5%;
 }
-
+.todosContainer{
+    margin-top: 2vh;
+    margin-bottom:20vh;
+}
 .todoButton {
     display: flex;
     align-items: center;
