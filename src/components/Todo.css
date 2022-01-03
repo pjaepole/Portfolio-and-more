@@ -2,6 +2,7 @@
 .newsList{
     display:flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 .newsCard{
     margin-left: 3%;
