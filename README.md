@@ -1,112 +1,52 @@
-This is my personal project for Todo list app.<br/>
-building a Todo list app based on functionality I think it can be useful for myself and other people.<br/>
-deployed here > <a target="_blank" rel="noopener noreferrer" href="https://todo-app-ten-smoky.vercel.app/" > vercel</a> <br/>
 
+### About the Project
+This is my personal project for Todo list app.<br/>
+I know this is the most common project you see online for developer to do and I also have seen a lot of videos about the to-do list,<br/>
+but I wanted to make it personal by adding functionality that "I" think will be useful to the user that was not in the tutorials online.
+
+### Deployment
+
+- Deployed with vercel: [Link to Website](https://todo-app-ten-smoky.vercel.app/)
+ <p align="center">
+<img  src="https://user-images.githubusercontent.com/87157585/147978196-85b9cf18-bd01-4f3f-9b61-a06c8cbc45d3.png" width="500">
+</p>
  
 Non Redux version 
 **(This is now removed)**
 - can add delete todos individually
 - filter todo based on completion
-- delete all completed todo~~
+- delete all completed todo
 - can filter todos based on completion status
 
 
 
 **Redux version added<br/>**
 - Functionality
-  - can now add todo using redux<br/>
-  - can now toggle the todo's complete status by clicking on the todos<br/>
-  - can now delete todos by clicking the delete button<br/>
-  - can now filter todos by selecting option from drop down selection<br/>
-  - added combineReducer to the reducer<br/>
-  - can now edit the todos by clicking on todo by todoEdit action<br/>
+  - can now add todo using redux
+  - can now toggle the todo's complete status by clicking on the todos
+  - can now delete todos by clicking the delete button
+  - can now filter todos by selecting option from drop down selection
+  - added combineReducer to the reducer
+  - can now edit the todos by clicking on todo by todoEdit action
 <br/>
 
 **FrontEnd changes<br/>**
 
- - Styling added with bootstrap and react-bootstrap for all components<br/>
- - Regular components without redux removed from display <br/>
- - Added just do it shia img for logo<br/>
- - Added date and time (clock)component<br/>
- - imported google font for date and time<br/>
- - Todos data persistence added by using localstorage<br/>
- - dark mode added<br/>
- - Media queries added for different screen sizes<br/>
- - Made component where it takes data from news api and display them in Reactbootstrap cards, but might remove this or only display with user interaction.<br/>
+ - Styling added with bootstrap and react-bootstrap for all components
+ - Regular components without redux removed from display 
+ - Added just do it shia img for logo
+ - Added date and time (clock)component
+ - imported google font for date and time
+ - Todos data persistence added by using localstorage
+ - dark mode added
+ - Media queries added for different screen sizes
+ - Made component where it takes data from news api and display them in Reactbootstrap cards, but might remove this or only display with user interaction.
+ - added favicon for the tab
+ - tab name changed from default react app >Just Do It
 
 
 
-
-
-
-
-# Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thanks for checking it out and have a good one
