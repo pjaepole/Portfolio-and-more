@@ -38,9 +38,11 @@
     display:flex;
     align-items: center;
     justify-content: space-around;
-    padding: 0 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 1%;
     margin: 0 15%;
-    margin-top: 0vh;
+    
 }
 .clockTime{
     font-family: 'Press Start 2P', cursive;
@@ -69,4 +71,10 @@
 .deleteAllcompletebutton{
     display: flex;
     justify-content: center;
+}
+
+@media only screen and (max-width:530px) {
+    .shiaImg {
+        height: 10vh;
+    }
 }
