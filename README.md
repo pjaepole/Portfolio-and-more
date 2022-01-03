@@ -8,19 +8,33 @@ can add delete todos individually<br/>
 filter todo based on completion<br/>
 delete all completed todo<br/>
 can filter todos based on completion status<br/>
+<br/>
 redux version added<br/>
+
+Functionality<br/>
 ----can now add todo using redux<br/>
 ----can now toggle the todo's complete status by clicking on the todos<br/>
 ----can now delete todos by clicking the delete button<br/>
 ----can now filter todos by selecting option from drop down selection<br/>
 ----added combineReducer to the reducer<br/>
+----can now edit the todos by clicking on todo by todoEdit action<br/>
+<br/>
 Styling added with bootstrap and react-bootstrap for all components<br/>
-Regular components without redux removed <br/>
+Regular components without redux removed from display <br/>
 Added just do it shia img for logo<br/>
 Added date and time (clock)component<br/>
 imported google font for date and time<br/>
 Todos data persistence added by using localstorage<br/>
 dark mode added<br/>
+Media queries added for different screen sizes<br/>
+Made component where it takes data from news api and display them in Reactbootstrap cards, but might remove this or only display with user interaction.<br/>
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
