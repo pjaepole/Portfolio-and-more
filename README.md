@@ -39,6 +39,8 @@ Non Redux version
  - imported google font for date and time
  - Todos data persistence added by using localstorage
  - dark mode added
+   - <img  src="https://user-images.githubusercontent.com/87157585/147982392-b4db25ac-2e87-437d-84c1-74791f3837ed.gif" width="300">
+
  - Media queries added for different screen sizes
  - Made component where it takes data from news api and display them in Reactbootstrap cards, but might remove this or only display with user interaction.
  - added favicon for the tab
