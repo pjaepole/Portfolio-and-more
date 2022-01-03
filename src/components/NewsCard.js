@@ -8,7 +8,7 @@ function NewsCard(props){
             <Card className={dtheme?'dark newsCard':'newsCard'}>
                 <Card.Body>
                     <Card.Title>{article.title}</Card.Title>
-                    <Card.Link href={article.url}>Link to article</Card.Link>
+                    <Card.Link href={article.url} target="_blank">Link to article</Card.Link>
                 </Card.Body>
             </Card>
         </div>
