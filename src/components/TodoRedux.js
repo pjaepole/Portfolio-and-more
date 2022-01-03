@@ -10,12 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function TodoRedux(props){
     const [check,setCheck]=useState(false)
     const {todo, dtheme,reduxtodos}=props
-    // useEffect(()=>{
-    //     const setlocal=()=>{
-    //         localStorage.setItem('todos',JSON.stringify(reduxtodos))
-    //     }
-    //     setlocal()
-    // },[todo])
+    
     console.log(reduxtodos)
     let completeToggler=(e)=>{
         props.dispatch(todoCompletedToggle(todo.id))
@@ -36,14 +31,14 @@ function TodoRedux(props){
         {todo.completed?
             <InputGroup className={dtheme?'mb-3 todo dark':'mb-3 todo'}>
                 <InputGroup.Checkbox className={dtheme?'dark':''}aria-label="Checkbox for following text input" onChange={completeToggler} checked={check}/>
-                <FormControl className={dtheme?'todoC dark':'todoC'} onClick={completeToggler} defaultValue={todo.text} onChange={editHandler}  aria-label="Text input with checkbox" />
+                <FormControl className={dtheme?'todoC dark':'todoC'} defaultValue={todo.text} onChange={editHandler}  aria-label="Text input with checkbox" />
                 <Button variant="dark" onClick={completeToggler}>Done</Button>
                 <Button variant="outline-secondary" onClick={deleteHandler}>Delete</Button>
             </InputGroup>
             :
             <InputGroup className={dtheme?'mb-3 todo dark':'mb-3 todo'}>
                 <InputGroup.Checkbox className={dtheme?'dark':''}aria-label="Checkbox for following text input" onChange={completeToggler} checked={check}/>
-                <FormControl className={dtheme?'dark':''} onClick={completeToggler} defaultValue={todo.text} onChange={editHandler}  aria-label="Text input with checkbox" />
+                <FormControl className={dtheme?'dark':''}  defaultValue={todo.text} onChange={editHandler}  aria-label="Text input with checkbox" />
                 <Button variant="dark" onClick={completeToggler}>Done</Button>
                 <Button variant="outline-secondary" onClick={deleteHandler}>Delete</Button>
             </InputGroup>
