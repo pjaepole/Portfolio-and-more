@@ -23,6 +23,10 @@
 .todosContainer{
     margin-top: 2vh;
     margin-bottom:20vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: stretch;
 }
 .todoButton {
     display: flex;
@@ -39,8 +43,8 @@
 }
 .clockTime{
     font-family: 'Press Start 2P', cursive;
-    width:100%;
 }
+
 .shiaImg {
     height: 30vh;
 }
@@ -59,4 +63,9 @@
 
 .footer {
     height:36vh;
+}
+
+.deleteAllcompletebutton{
+    display: flex;
+    justify-content: center;
 }

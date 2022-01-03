@@ -1,7 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import TodoRedux from './TodoRedux'
-
+import {todoDeleteAllComplete} from '../actions'
+import { Button } from 'react-bootstrap';
 function TodoListRedux (props) {
     const {reduxtodos, filt}=props
     let fil
@@ -17,7 +18,10 @@ function TodoListRedux (props) {
             displayCompletion='Incomplete'
         }
     }
-    
+    const deleteAllCompleteTodo=(e)=>{
+        e.preventDefault()
+        props.dispatch(todoDeleteAllComplete())
+    }
     return(
         
         <div className='todosContainer'>
@@ -25,10 +29,17 @@ function TodoListRedux (props) {
                 <h1>{displayCompletion} Todos </h1>
             </div>
             {fil.length<1?
-                <div className='todo'>Under {displayCompletion} Filter There Is Nothing----{reduxtodos.length===0?'add something to do':''}{fil.map(todo=>{return <TodoRedux todo={todo} key={todo.id}/>})}</div>
+                <div className='todo'>
+                    {reduxtodos.length===0?"I don't think you have anything in the list":`Under ${displayCompletion} Filter There Is Nothing.`}
+                </div>
                 :
-                <div>{fil.map(todo=>{return <TodoRedux todo={todo} key={todo.id}/>})}{fil.length===0?"nothing filtered yet, use dropdown select option to change filter":""}</div>
+                <div>{fil.map(todo=>{return <TodoRedux todo={todo} key={todo.id}/>})}
+                    {fil.length===0?"nothing filtered yet, use dropdown select option to change filter":""}
+                </div>
             }
+            <div className='deleteAllcompletebutton'>
+            <Button style={{width:'50%'}} variant="outline-secondary" onClick={deleteAllCompleteTodo}>Remove Completed Todo</Button>
+            </div>
         </div>
     )
 }

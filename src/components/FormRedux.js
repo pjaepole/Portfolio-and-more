@@ -81,7 +81,7 @@ function FormRedux(props){
                     </div>
                     <FormControl
                         className={props.dtheme?'dark':''}
-                        placeholder="Add What To Do....."
+                        placeholder="Add Something To Do....."
                         aria-describedby="basic-addon2"
                         onChange={todoInput} value={formvalues.todo} name='todo' type='text'
                     />

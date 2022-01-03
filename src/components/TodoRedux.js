@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 import {todoCompletedToggle,
         todoDelete,
         todoEdit} from '../actions'
@@ -7,6 +7,7 @@ import { InputGroup,
         FormControl,
         Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 function TodoRedux(props){
     const [check,setCheck]=useState(false)
     const {todo, dtheme,reduxtodos}=props
@@ -21,8 +22,6 @@ function TodoRedux(props){
     }
 
     const editHandler=(e)=>{
-        console.log('edithandler', e.target.value)
-        console.log(todo)
         props.dispatch(todoEdit(todo.id,e.target.value))
     }
     return (
@@ -30,15 +29,35 @@ function TodoRedux(props){
             
         {todo.completed?
             <InputGroup className={dtheme?'mb-3 todo dark':'mb-3 todo'}>
-                <InputGroup.Checkbox className={dtheme?'dark':''}aria-label="Checkbox for following text input" onChange={completeToggler} checked={check}/>
-                <FormControl className={dtheme?'todoC dark':'todoC'} defaultValue={todo.text} onChange={editHandler}  aria-label="Text input with checkbox" />
+                <InputGroup.Checkbox 
+                    className={dtheme?'dark':''}
+                    aria-label="Checkbox for following text input" 
+                    onChange={completeToggler} 
+                    checked={check}
+                />
+                <FormControl 
+                    className={dtheme?'todoC dark':'todoC'} 
+                    defaultValue={todo.text} 
+                    onChange={editHandler}  
+                    aria-label="Text input with checkbox" 
+                />
                 <Button variant="dark" onClick={completeToggler}>Done</Button>
                 <Button variant="outline-secondary" onClick={deleteHandler}>Delete</Button>
             </InputGroup>
             :
             <InputGroup className={dtheme?'mb-3 todo dark':'mb-3 todo'}>
-                <InputGroup.Checkbox className={dtheme?'dark':''}aria-label="Checkbox for following text input" onChange={completeToggler} checked={check}/>
-                <FormControl className={dtheme?'dark':''}  defaultValue={todo.text} onChange={editHandler}  aria-label="Text input with checkbox" />
+                <InputGroup.Checkbox 
+                    className={dtheme?'dark':''}
+                    aria-label="Checkbox for following text input" 
+                    onChange={completeToggler} 
+                    checked={check}
+                />
+                <FormControl 
+                    className={dtheme?'dark':''}  
+                    defaultValue={todo.text} 
+                    onChange={editHandler}  
+                    aria-label="Text input with checkbox" 
+                />
                 <Button variant="dark" onClick={completeToggler}>Done</Button>
                 <Button variant="outline-secondary" onClick={deleteHandler}>Delete</Button>
             </InputGroup>
@@ -46,6 +65,7 @@ function TodoRedux(props){
         </div>
     )
 }
+
 const mapStateToProps = (state)=>{
     return {
         reduxtodos:state.todoReducer.todos,
