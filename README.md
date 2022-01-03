@@ -1,3 +1,4 @@
+
 ### About the Project
 This is my personal project for Todo list app.<br/>
 I know this is the most common project you see online for developer to do and I also have seen a lot of videos about the to-do list,<br/>
@@ -6,6 +7,9 @@ but I wanted to make it personal by adding functionality that "I" think will be 
 ### Deployment
 
 - Deployed with vercel: [Link to Website](https://todo-app-ten-smoky.vercel.app/)
+ <p align="center">
+<img  src="https://user-images.githubusercontent.com/87157585/147978196-85b9cf18-bd01-4f3f-9b61-a06c8cbc45d3.png" width="500">
+</p>
  
 Non Redux version 
 **(This is now removed)**
