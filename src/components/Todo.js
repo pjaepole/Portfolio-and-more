@@ -17,10 +17,12 @@ function Todo(props){
         }))
     }
     return(
-        <div>
+        <div >
             {todo.completed?<div className='todoC'>{todo.text}</div> :<div>{todo.text}</div>}
+            <div>
             <button onClick={toggleDone}>done</button>
             <button onClick={deleteHandler}>remove from list</button>
+            </div>
         </div>
     )
 }

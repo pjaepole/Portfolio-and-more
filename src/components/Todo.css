@@ -18,8 +18,9 @@
 
 .todo {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     padding: 0 5%;
+    align-items: stretch;
 }
 .todosContainer{
     margin-top: 2vh;
@@ -72,9 +73,43 @@
     display: flex;
     justify-content: center;
 }
+.todoContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.todocheckboxandinputfield{
+    display:flex;
+    flex-wrap: nowrap;
+    width: 80%;
+    
+}
+.donedeletebutton {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+@media only screen and (max-width:635px) {
+    .shiaImg {
+        height: 15vh;
+    }
+    .clockTime{
+        font-family: 'Press Start 2P', cursive;
+        font-size: medium;
+    }
+    .todoContainer{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
 
 @media only screen and (max-width:530px) {
     .shiaImg {
         height: 10vh;
+    }
+    .clockTime{
+        font-size: small;
     }
 }

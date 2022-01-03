@@ -29,6 +29,7 @@ function TodoRedux(props){
             
         {todo.completed?
             <InputGroup className={dtheme?'mb-3 todo dark':'mb-3 todo'}>
+                <div className='todocheckboxandinputfield'>
                 <InputGroup.Checkbox 
                     className={dtheme?'dark':''}
                     aria-label="Checkbox for following text input" 
@@ -41,25 +42,32 @@ function TodoRedux(props){
                     onChange={editHandler}  
                     aria-label="Text input with checkbox" 
                 />
+                </div>
+                <div className='donedeletebutton'>
                 <Button variant="dark" onClick={completeToggler}>Done</Button>
                 <Button variant="outline-secondary" onClick={deleteHandler}>Delete</Button>
+                </div>
             </InputGroup>
             :
             <InputGroup className={dtheme?'mb-3 todo dark':'mb-3 todo'}>
-                <InputGroup.Checkbox 
-                    className={dtheme?'dark':''}
-                    aria-label="Checkbox for following text input" 
-                    onChange={completeToggler} 
-                    checked={check}
-                />
-                <FormControl 
-                    className={dtheme?'dark':''}  
-                    defaultValue={todo.text} 
-                    onChange={editHandler}  
-                    aria-label="Text input with checkbox" 
-                />
-                <Button variant="dark" onClick={completeToggler}>Done</Button>
-                <Button variant="outline-secondary" onClick={deleteHandler}>Delete</Button>
+                <div className='todocheckboxandinputfield'>
+                    <InputGroup.Checkbox 
+                        className={dtheme?'dark':''}
+                        aria-label="Checkbox for following text input" 
+                        onChange={completeToggler} 
+                        checked={check}
+                    />
+                    <FormControl 
+                        className={dtheme?'dark':''}  
+                        defaultValue={todo.text} 
+                        onChange={editHandler}  
+                        aria-label="Text input with checkbox" 
+                    />
+                </div>
+                <div className='donedeletebutton'>
+                    <Button  variant="dark" onClick={completeToggler}>Done</Button>
+                    <Button variant="outline-secondary" onClick={deleteHandler}>Delete</Button>
+                </div>
             </InputGroup>
         }
         </div>
