@@ -43,9 +43,9 @@ function TodoRedux(props){
                     aria-label="Text input with checkbox" 
                 />
                 </div>
-                <div className='donedeletebutton'>
-                <Button variant="dark" onClick={completeToggler}>Done</Button>
-                <Button variant="outline-secondary" onClick={deleteHandler}>Delete</Button>
+                <div className='donedeletebuttoncontainer'>
+                <Button className='donedeletebutton' variant="dark"  onClick={completeToggler}>Done</Button>
+                <Button className='donedeletebutton' variant="outline-secondary" onClick={deleteHandler}>Delete</Button>
                 </div>
             </InputGroup>
             :
@@ -64,9 +64,9 @@ function TodoRedux(props){
                         aria-label="Text input with checkbox" 
                     />
                 </div>
-                <div className='donedeletebutton'>
-                    <Button  variant="dark" onClick={completeToggler}>Done</Button>
-                    <Button variant="outline-secondary" onClick={deleteHandler}>Delete</Button>
+                <div className='donedeletebuttoncontainer'>
+                    <Button className='donedeletebutton' variant="dark" onClick={completeToggler}>Done</Button>
+                    <Button className='donedeletebutton' variant="outline-secondary" onClick={deleteHandler}>Delete</Button>
                 </div>
             </InputGroup>
         }
