@@ -1,5 +1,10 @@
-body{
-    background-color: #343a40
+
+.newsList{
+    display:flex;
+    justify-content: space-evenly;
+}
+.newsCard{
+    margin-left: 3%;
 }
 .dark{
     background-color: #343a40 !important;
@@ -13,10 +18,12 @@ body{
 .todo {
     display: flex;
     justify-content: space-evenly;
-    margin: 2vh 0vh ;
     padding: 0 5%;
 }
-
+.todosContainer{
+    margin-top: 2vh;
+    margin-bottom:20vh;
+}
 .todoButton {
     display: flex;
     align-items: center;
@@ -46,3 +53,10 @@ body{
     width:13%;
 }
 
+.todolist{
+    height:100vh;
+}
+
+.footer {
+    height:36vh;
+}

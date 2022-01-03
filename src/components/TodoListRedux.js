@@ -20,7 +20,7 @@ function TodoListRedux (props) {
     
     return(
         
-        <div>
+        <div className='todosContainer'>
             <div className='todo'>
                 <h1>{displayCompletion} Todos </h1>
             </div>

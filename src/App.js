@@ -5,7 +5,7 @@ import FormRedux from './components/FormRedux';
 import TodoListRedux from './components/TodoListRedux';
 import { connect } from 'react-redux'
 import Footer from './components/Footer'
-
+import NewsList from './components/NewsList';
 
 
 function App(props) {
@@ -16,13 +16,13 @@ function App(props) {
       <Clock/>
       <FormRedux/>
       <TodoListRedux />
+      <NewsList/>
       <Footer/>
     </div>
   );
 }
 
 const mapStateToProps = (state)=>{
-  console.log('this is',state)
   return {
     dtheme:state.todoReducer.darkmode
   }
