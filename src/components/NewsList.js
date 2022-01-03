@@ -9,7 +9,7 @@ function NewsList(){
         .then(response => response.json())
         .then(data => setNews(data.data));
     },[])
-    console.log('this is from footer',news)
+    // console.log('this is from footer',news)
     return(
         <div className='newsList'>
             {news.slice(0,5).map((article)=>(<NewsCard key={article.title} article={article}/>))}

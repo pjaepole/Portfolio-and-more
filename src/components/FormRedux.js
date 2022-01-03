@@ -29,6 +29,7 @@ function FormRedux(props){
           }
         getlocal()
     },[])
+    
     useEffect(()=>{
         const setlocal=()=>{
             localStorage.setItem('todos',JSON.stringify(props.reduxtodos))
@@ -80,12 +81,12 @@ function FormRedux(props){
                     </div>
                     <FormControl
                         className={props.dtheme?'dark':''}
-                        placeholder="Add What To Do....."
+                        placeholder="Add Something To Do....."
                         aria-describedby="basic-addon2"
                         onChange={todoInput} value={formvalues.todo} name='todo' type='text'
                     />
                     <Button variant="dark" onClick={submitTodoHandler}>Add Todo</Button>
-                    <Button variant="outline-secondary" onClick={deleteAllCompleteTodo}>Remove Completed Todo</Button>
+                    
                     
                 </InputGroup>
             </form>
