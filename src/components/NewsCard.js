@@ -2,7 +2,7 @@ import { Card } from 'react-bootstrap';
 import { connect } from 'react-redux'
 function NewsCard(props){
     const {dtheme,article}=props
-    console.log(article)
+    // console.log(article)
     return(
         <div>
             <Card className={dtheme?'dark newsCard':'newsCard'}>

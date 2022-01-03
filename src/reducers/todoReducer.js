@@ -1,11 +1,12 @@
 import {
+    DARKMODE_TOGGLE,
     ADD_TODO,
     TODO_COMPLETED_TOGGLE,
     TODO_DELETE,
     TODO_DELETE_ALL_COMPLETE,
     TODO_FILTER_BY_COMPLETED_DEFAULT,
     TODO_PERSISTANT,
-    DARKMODE_TOGGLE
+    TODO_EDIT
 } from '../actions'
 
 export const initialState ={
@@ -23,6 +24,16 @@ export const initialState ={
 
 const todoReducer =(state=initialState,action)=>{
     switch (action.type){
+        case(TODO_EDIT):
+            return({
+                ...state,
+                    todos:state.todos.map((todo)=>{if(todo.id===action.payload){
+                        return {...todo,text:action.content}
+                    } else {
+                        return {...todo}
+                    }
+                })
+            })
         case(DARKMODE_TOGGLE):
             return({
                 ...state,

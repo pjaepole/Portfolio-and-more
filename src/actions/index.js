@@ -5,7 +5,11 @@ export const TODO_DELETE_ALL_COMPLETE="TODO_DELETE_ALL_COMPLETE"
 export const TODO_FILTER_BY_COMPLETED_DEFAULT="TODO_FILTER_BY_COMPLETED_DEFAULT"
 export const TODO_PERSISTANT="TODO_PERSISTANT"
 export const DARKMODE_TOGGLE="DARKMODE_TOGGLE"
+export const TODO_EDIT="TODO_EDIT"
 
+export const todoEdit=(id,change)=>{
+    return ({type:TODO_EDIT, payload:id,content:change })
+}
 export const addTodo=(todo)=>{
     return({type:ADD_TODO, payload:todo})
 }

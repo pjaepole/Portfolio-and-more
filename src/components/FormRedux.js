@@ -29,6 +29,7 @@ function FormRedux(props){
           }
         getlocal()
     },[])
+    
     useEffect(()=>{
         const setlocal=()=>{
             localStorage.setItem('todos',JSON.stringify(props.reduxtodos))
