@@ -12,7 +12,7 @@ function TodoRedux(props){
     const [check,setCheck]=useState(false)
     const {todo, dtheme,reduxtodos}=props
     
-    console.log(reduxtodos)
+    
     let completeToggler=(e)=>{
         props.dispatch(todoCompletedToggle(todo.id))
         setCheck(!check)
