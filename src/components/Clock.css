@@ -1,0 +1,12 @@
+.clock_Timer{
+    display: flex;
+    justify-content: space-around;
+    padding:5px 5px;
+}
+.clock_Timer_min{
+    margin-right: 10px;
+}
+
+.clock_Timer_sec{
+    margin-right: 10px;
+}
