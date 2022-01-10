@@ -10,7 +10,7 @@ function Clock(){
     const [calendar, setCalendar]=useState('')
     const [showTimer, setShowTimer]=useState(false)
     const [minTimer, setMinTimer]=useState(0)
-    const [secTimer, setSecTimer]=useState(2)
+    const [secTimer, setSecTimer]=useState(0)
     const [timerOn, setTimerOn]=useState(false)
     const [timerSet,setTimerSet]=useState(false)
 
@@ -19,17 +19,19 @@ function Clock(){
         let interval=setInterval(()=>{
             clearInterval(interval)
             if(timerOn){
-                if(secTimer===0){
+                if(secTimer<=0){
                     if(minTimer>0){
                         setMinTimer(minTimer-1)
                         setSecTimer(59)
-                    } else if(secTimer===0&&minTimer===0){
+                    } else if(secTimer<=0&&minTimer<=0){
                         alert('timer is done')
                         setTimerOn(false)
                     }
                 } else if(secTimer>0){
                     setSecTimer(secTimer-1)
                 } 
+                    
+                
             }
         },1000)
     },[timerOn,secTimer])
