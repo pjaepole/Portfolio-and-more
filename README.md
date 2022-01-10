@@ -28,6 +28,8 @@ Non Redux version
   - can now filter todos by selecting option from drop down selection
   - added combineReducer to the reducer
   - can now edit the todos by clicking on todo by todoEdit action
+  - can now toggle between nightmode/lightmode
+  - added timer functionality when clicked on just do it shia img
 <br/>
 
 **FrontEnd changes<br/>**
