@@ -45,8 +45,8 @@ Non Redux version
  - Made component where it takes data from news api and display them in Reactbootstrap cards, but might remove this or only display with user interaction.
  - added favicon for the tab
  - tab name changed from default react app >Just Do It
-
-
+ - timer function added, when you click just do it shia img it mounts timer component where clock and date was supposed to be
+   - <img  src="https://user-images.githubusercontent.com/87157585/148712489-bd3ddb3c-a978-4fd7-8a0c-c7e0780bf84e.gif" width="300">
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
