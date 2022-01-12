@@ -54,3 +54,5 @@ Non Redux version
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Thanks for checking it out and have a good one
+
+Temporarlity on leave for onboarding with school project 1/11/2021
