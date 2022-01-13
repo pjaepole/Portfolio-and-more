@@ -56,3 +56,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Thanks for checking it out and have a good one
 
 Temporarlity on leave for onboarding with school project 1/11/2021
+Still onboarding, looking over docs about ant design and okta, code base looks nothing like the project I am used to 1/12/2021
