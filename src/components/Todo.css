@@ -53,6 +53,7 @@
 
 .shiaImg {
     height: 30vh;
+    z-index: 10;
 }
 .todoTitle{
     width:100%;
@@ -90,6 +91,11 @@
     display: flex;
     flex-wrap: nowrap;
     width:20%
+}
+.hamburger_main_div{
+    margin-bottom: -20px;
+    position: absolute;
+    /* z-index:-1; */
 }
 
 
