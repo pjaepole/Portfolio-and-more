@@ -32,11 +32,12 @@ function Hamburger(props) {
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
                 <Nav.Link href="/">Home</Nav.Link>
-                <Nav.Link href="https://www.linkedin.com/in/jaehun-park/">My LinkedIn</Nav.Link>
+                <Nav.Link href="https://www.linkedin.com/in/jaehun-park/" target="_blank">My LinkedIn</Nav.Link>
+                <Nav.Link href="https://github.com/pjaepole" target="_blank">My GitHub</Nav.Link>
                 <NavDropdown title="Dropdown" id="offcanvasNavbarDropdown">
-                  <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action4">
-                    Another action
+                  <NavDropdown.Item href="https://calendar.google.com/" target="_blank">Google Calendar</NavDropdown.Item>
+                  <NavDropdown.Item href="https://docs.google.com/" target="_blank">
+                    Google Doc
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item href="#action5">
