@@ -41,6 +41,7 @@ function Hamburger(props) {
                     Something else here
                   </NavDropdown.Item>
                 </NavDropdown>
+                <Nav.Link href="https://github.com/pjaepole/Portfolio-and-more" target="_blank">About this project</Nav.Link>
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
