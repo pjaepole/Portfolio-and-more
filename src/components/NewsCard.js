@@ -18,5 +18,5 @@ const mapStateToProps = (state)=>{
     return {
       dtheme:state.todoReducer.darkmode
     }
-  }
+}
 export default connect(mapStateToProps)(NewsCard)

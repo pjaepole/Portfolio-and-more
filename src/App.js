@@ -6,13 +6,14 @@ import TodoListRedux from './components/TodoListRedux';
 import { connect } from 'react-redux'
 import Footer from './components/Footer'
 import NewsList from './components/NewsList';
-
+import Hamburger from './components/Hamburger';
 
 function App(props) {
    const {dtheme}=props
  
   return (
     <div className={dtheme?'dark':''}>
+      <Hamburger/>
       <Clock/>
       <FormRedux/>
       <TodoListRedux />
