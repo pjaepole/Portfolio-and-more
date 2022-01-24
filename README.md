@@ -1,7 +1,8 @@
 
 ### About the Project
 This is my personal project for Todo list app.<br/>
-While I was building the project I thought, Wouldn't it be cool if project I was working on actually helpful to me?
+While I was building the project I thought,<br/>
+Wouldn't it be cool if I can use the project rather than just look pretty?
 ### Yeah and this is what it is
 I know this is the most common project you see online for developer to do and I also have seen a lot of videos about the to-do list,<br/>
 but I wanted to make it personal by adding functionality that "I" think will be useful to the user that was not in the tutorials online.
