@@ -37,8 +37,14 @@ function Hamburger(props) {
                     Google Doc
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action5">
-                    Something else here
+                  <NavDropdown.Item href="https://www.codewars.com/dashboard" target="_blank">
+                    Codewars
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="https://leetcode.com/problemset/all/" target="_blank">
+                    Leetcode
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="https://app.codesignal.com/arcade" target="_blank">
+                    CodeSignal
                   </NavDropdown.Item>
                 </NavDropdown>
                 <Nav.Link href="https://github.com/pjaepole/Portfolio-and-more" target="_blank">About this project</Nav.Link>
